@@ -186,12 +186,12 @@
   z-index: -1;
 }
 
-/* Handwritten accent (assinatura Maria) */
-.handwritten {
+/* Assinatura — mesmo Fraunces italic display, sem opsz manuscrito */
+.assinatura {
   font-family: "Fraunces", serif;
   font-style: italic;
   font-weight: 400;
-  font-variation-settings: "opsz" 9;
+  font-variation-settings: "opsz" 144;
 }
 
 /* Marquee suave */

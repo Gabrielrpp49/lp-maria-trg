@@ -68,7 +68,10 @@ export function CTAFinal() {
               Conversar no WhatsApp
             </a>
 
-            <p className="mt-8 handwritten italic text-[var(--color-bege)]/90 text-lg">
+            <p
+              className="mt-8 font-display italic text-[var(--color-bege)]/90 text-xl"
+              style={{ fontVariationSettings: '"opsz" 144' }}
+            >
               Com carinho, Fatinha.
             </p>
           </motion.div>

@@ -102,7 +102,10 @@ export function OQueETRG() {
               />
               <circle cx="150" cy="150" r="140" fill="url(#ring-grad)" />
             </svg>
-            <p className="mt-6 text-center handwritten text-[var(--color-verde-profundo)] text-lg italic">
+            <p
+              className="mt-6 text-center font-display italic text-[var(--color-verde-profundo)] text-lg"
+              style={{ fontVariationSettings: '"opsz" 144' }}
+            >
               Ir à origem <span className="text-[var(--color-bege)]">·</span> reprocessar <span className="text-[var(--color-bege)]">·</span> ressignificar
             </p>
           </motion.div>

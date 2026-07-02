@@ -58,14 +58,14 @@ export function Sobre() {
               </svg>
             </div>
 
-            {/* Assinatura handwritten flutuando */}
+            {/* Assinatura em Fraunces italic display */}
             <motion.p
-              initial={{ opacity: 0, rotate: -4 }}
-              whileInView={{ opacity: 1, rotate: -4 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.6 }}
-              className="absolute -bottom-3 left-4 md:left-8 handwritten italic text-2xl md:text-3xl text-[var(--color-verde-profundo)]"
-              style={{ transform: "rotate(-4deg)" }}
+              className="absolute -bottom-3 left-6 md:left-10 font-display italic text-3xl md:text-4xl text-[var(--color-verde-profundo)]"
+              style={{ fontVariationSettings: '"opsz" 144' }}
             >
               Fatinha
             </motion.p>
