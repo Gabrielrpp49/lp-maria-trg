@@ -42,10 +42,11 @@ export function Sobre() {
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-md mx-auto md:mx-0 border border-[var(--color-verde-profundo)]/10 shadow-[0_40px_80px_-30px_rgba(14,60,56,0.35)]">
               <img
                 src="/assets/img/foto-maria.jpg"
-                alt="Maria de Fátima Abreu, Terapeuta TRG"
+                alt="Maria de Fátima Abreu, terapeuta de Reprocessamento Generativo (TRG) certificada CITRG 17.419, atendimento online e presencial em Curitiba"
                 className="absolute inset-0 h-full w-full object-cover object-[center_18%]"
                 style={{ filter: "saturate(1.05) contrast(1.03)" }}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
                 decoding="async"
               />
               {/* Gradient overlay bottom */}
@@ -120,13 +121,13 @@ export function Sobre() {
 
             <div className="space-y-4 text-[var(--color-tinta-suave)] leading-relaxed text-[16.5px] md:text-[17px] text-pretty">
               <p>
-                Passei mais de <span className="text-[var(--color-verde-profundo)] font-semibold">30 anos como professora de Língua Portuguesa</span>, e nesse tempo aprendi que a palavra cura. Que ouvir e ser ouvido transforma.
+                Antes da terapia, foram mais de <span className="text-[var(--color-verde-profundo)] font-semibold">30 anos como professora de Língua Portuguesa</span>. Nesse tempo aprendi uma coisa que carrego até hoje: a palavra cura. Ouvir e ser ouvido transforma.
               </p>
               <p>
-                Foi esse cuidado com o ser humano que me trouxe até a Terapia de Reprocessamento Generativo. Hoje, como terapeuta TRG, ajudo pessoas a se reencontrarem: a soltar o peso do passado e voltar a viver com mais presença, autoestima e paz.
+                Foi esse cuidado com o outro que me levou à Terapia de Reprocessamento Generativo. Hoje ajudo pessoas a se reencontrarem, a soltar o peso do que ficou para trás e voltar a viver com mais presença, autoestima e paz.
               </p>
               <p className="text-[var(--color-verde-profundo)] italic font-medium">
-                Este espaço nasceu dessa travessia. Se você chegou até aqui, sinta-se em casa.
+                Se você chegou até aqui, sinta-se em casa.
               </p>
             </div>
 

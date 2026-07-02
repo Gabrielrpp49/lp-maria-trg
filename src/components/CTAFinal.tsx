@@ -72,7 +72,7 @@ export function CTAFinal() {
               className="mt-8 font-display italic text-[var(--color-bege)]/90 text-xl"
               style={{ fontVariationSettings: '"opsz" 144' }}
             >
-              Com carinho, Fatinha.
+              Estarei do outro lado.
             </p>
           </motion.div>
         </div>
