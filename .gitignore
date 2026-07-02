@@ -1,6 +1,9 @@
-_scripts/
 node_modules/
+dist/
 .DS_Store
 Thumbs.db
 *.log
 .vscode/
+.env
+.env.local
+*.tsbuildinfo

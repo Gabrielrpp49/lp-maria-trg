@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Pantone oficial Maria de Fátima Abreu */
+  --color-verde-profundo: #0E3C38;   /* Pantone 567 C */
+  --color-verde-hover: #0a2e2a;
+  --color-verde-suave: #BECBBA;       /* Pantone 5595 C */
+  --color-bege: #F3CFB2;              /* Pantone 876 C */
+  --color-bege-glow: #F5D9C0;
+  --color-creme: #FEF4EB;             /* Pantone 7506 C */
+  --color-creme-warm: #FBEDDD;
+  --color-tinta: #1A2E2C;
+  --color-tinta-suave: rgba(26, 46, 44, 0.72);
+  --color-tinta-mute: rgba(26, 46, 44, 0.55);
+  --color-linha: rgba(14, 60, 56, 0.10);
+
+  /* Tipografia */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Easing */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html, body {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+
+  body {
+    background: var(--color-creme);
+    color: var(--color-tinta);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background: var(--color-verde-profundo);
+    color: var(--color-creme);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: var(--color-verde-profundo);
+    font-variation-settings: "opsz" 144;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-verde-profundo);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@utility container-lp {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 1240px;
+}
+
+@media (min-width: 768px) {
+  .container-lp { padding-inline: 2rem; }
+}
+@media (min-width: 1024px) {
+  .container-lp { padding-inline: 3rem; }
+}
+
+.text-balance { text-wrap: balance; }
+.text-pretty { text-wrap: pretty; }
+
+/* Aurora orgânica sutil — nunca ostensiva. Vibe wellness clinic. */
+.aurora-warm {
+  position: absolute;
+  inset: -30%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora-warm::before,
+.aurora-warm::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.55;
+  animation: aurora-drift 22s var(--ease-out-quart) infinite alternate;
+}
+
+.aurora-warm::before {
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(closest-side, var(--color-bege), transparent);
+  top: 10%;
+  left: -15%;
+}
+
+.aurora-warm::after {
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(closest-side, var(--color-verde-suave), transparent);
+  bottom: -10%;
+  right: -10%;
+  animation-delay: -8s;
+  opacity: 0.65;
+}
+
+@keyframes aurora-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(4%, -3%) scale(1.12); }
+}
+
+/* Grain textura papel — mata cara de IA gradient */
+.grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence baseFrequency='0.85' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.65'/></svg>");
+  opacity: 0.04;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+/* Dark section: para blocos verde profundo dentro da LP creme */
+.section-dark {
+  background: var(--color-verde-profundo);
+  color: var(--color-creme);
+  position: relative;
+  overflow: hidden;
+}
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 {
+  color: var(--color-creme);
+}
+.section-dark .grain {
+  mix-blend-mode: screen;
+  opacity: 0.08;
+}
+
+/* Curva orgânica separadora entre seções */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+/* Botão magnetic */
+.btn-magnetic {
+  position: relative;
+  isolation: isolate;
+  transition: transform 300ms var(--ease-out-expo);
+}
+.btn-magnetic:hover {
+  transform: translateY(-3px);
+}
+
+/* Glow border card */
+.glow-card {
+  position: relative;
+  isolation: isolate;
+}
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(140deg, rgba(243,207,178,0.4), rgba(190,203,186,0.25), transparent);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Handwritten accent (assinatura Maria) */
+.handwritten {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: "opsz" 9;
+}
+
+/* Marquee suave */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 42s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Breathing dot (respiração — para acentos discretos) */
+.breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50%      { transform: scale(1.08); opacity: 1; }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
