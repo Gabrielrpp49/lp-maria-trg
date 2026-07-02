@@ -77,9 +77,10 @@ export function Header() {
           </a>
 
           <button
-            className="lg:hidden inline-flex md:hidden items-center justify-center w-10 h-10 rounded-full bg-[var(--color-verde-profundo)] text-[var(--color-creme)]"
+            className="lg:hidden inline-flex md:hidden items-center justify-center w-11 h-11 rounded-full bg-[var(--color-verde-profundo)] text-[var(--color-creme)]"
             onClick={() => setOpen(!open)}
-            aria-label="Menu"
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

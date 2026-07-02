@@ -4,7 +4,7 @@ const elementos = [
   {
     nome: "Corpo",
     frase: "O que se sente, se guarda.",
-    copy: "Respirar mais fundo antes da pressa. Dormir com verdade. Beber água com presença. É pelo corpo que o alívio começa a caber.",
+    copy: "Respirar mais fundo antes da pressa, dormir com verdade, beber água com presença. É pelo corpo que o alívio começa a caber.",
     svg: (
       <svg viewBox="0 0 140 140" className="w-24 h-24" aria-hidden>
         <defs>
@@ -50,7 +50,7 @@ const elementos = [
   {
     nome: "Mente",
     frase: "O que se pensa, se planta.",
-    copy: "Trocar o automático por atenção. Escolher palavras que acolham em vez de ferir. A cabeça descansa quando o dia tem intenção.",
+    copy: "Trocar o automático por atenção, escolher palavras que acolham em vez de ferir. A cabeça descansa quando o dia tem intenção.",
     svg: (
       <svg viewBox="0 0 140 140" className="w-24 h-24" aria-hidden>
         <defs>
@@ -98,7 +98,7 @@ const elementos = [
   {
     nome: "Espírito",
     frase: "O que se cultiva, floresce.",
-    copy: "O silêncio também é cuidado. A gratidão também é remédio. Fazer a sua parte com verdade e, depois, soltar. Confiando no processo.",
+    copy: "O silêncio também é cuidado, a gratidão também é remédio. Fazer a sua parte com verdade, e depois soltar, confiando no processo.",
     svg: (
       <svg viewBox="0 0 140 140" className="w-24 h-24" aria-hidden>
         <defs>
@@ -166,7 +166,7 @@ export function Filosofia() {
             Somos parte de um <span className="italic font-light text-[var(--color-tinta)]/45">mesmo todo</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-[16.5px] md:text-[17px] leading-relaxed text-[var(--color-tinta-suave)] text-balance">
-            Corpo, mente e espírito não caminham separados. E o ambiente onde você pisa faz parte dessa mesma respiração.
+            Corpo, mente e espírito não caminham separados, e o ambiente onde você pisa faz parte dessa mesma respiração.
           </p>
         </motion.div>
 
@@ -181,7 +181,8 @@ export function Filosofia() {
               className="group relative rounded-[28px] p-8 md:p-9 bg-[var(--color-creme)]/85 backdrop-blur-sm border border-[var(--color-verde-profundo)]/10 hover:border-[var(--color-verde-profundo)]/25 hover:shadow-[0_28px_60px_-30px_rgba(14,60,56,0.35)] hover:-translate-y-1 transition-all duration-500"
             >
               <div className="mb-5">{el.svg}</div>
-              <p className="text-[10.5px] uppercase tracking-[0.22em] font-semibold text-[var(--color-bege)] mb-2">
+              <p className="inline-flex items-center gap-2 text-[10.5px] uppercase tracking-[0.22em] font-bold text-[var(--color-verde-profundo)] mb-3">
+                <span className="w-6 h-px bg-[var(--color-verde-profundo)]" />
                 {el.nome}
               </p>
               <h3

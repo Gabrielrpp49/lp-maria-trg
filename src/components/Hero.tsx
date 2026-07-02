@@ -57,58 +57,61 @@ export function Hero() {
         >
           <motion.div
             variants={fadeUp}
-            className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-[var(--color-verde-profundo)]/12 bg-[var(--color-creme-warm)]/60 backdrop-blur px-4 py-1.5"
+            animate={{
+              boxShadow: [
+                "0 0 0 0 rgba(243, 207, 178, 0.55), 0 0 0 0 rgba(243, 207, 178, 0)",
+                "0 0 0 3px rgba(243, 207, 178, 0.35), 0 0 24px 4px rgba(243, 207, 178, 0.4)",
+                "0 0 0 0 rgba(243, 207, 178, 0.55), 0 0 0 0 rgba(243, 207, 178, 0)",
+              ],
+            }}
+            transition={{
+              boxShadow: { duration: 2.6, repeat: Infinity, ease: "easeInOut" },
+            }}
+            className="mb-8 inline-flex items-center gap-2.5 rounded-full border-[1.5px] border-[var(--color-bege)] bg-[var(--color-creme)]/40 backdrop-blur px-4 py-1.5"
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-verde-profundo)] opacity-45" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-verde-profundo)]" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-bege)] opacity-70" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-bege)]" />
             </span>
-            <span className="text-[11px] font-medium tracking-[0.18em] uppercase text-[var(--color-verde-profundo)]">
+            <span className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[var(--color-verde-profundo)]">
               Terapia de Reprocessamento Generativo
             </span>
           </motion.div>
 
           <motion.h1
             variants={fadeUp}
-            className="text-balance font-display text-[2.6rem] leading-[1.02] sm:text-5xl md:text-6xl lg:text-[5.2rem] font-normal tracking-[-0.025em] text-[var(--color-verde-profundo)]"
+            className="text-balance font-display text-[2.15rem] leading-[1.05] sm:text-[3rem] md:text-6xl lg:text-[5.2rem] font-normal tracking-[-0.025em] text-[var(--color-verde-profundo)]"
             style={{ fontVariationSettings: '"opsz" 144' }}
           >
-            A dor que você carrega{" "}
+            A dor que você carrega <span className="italic font-light">tem uma origem.</span> E tem{" "}
             <span className="relative inline-block">
-              <span className="italic font-light">tem uma origem.</span>
-            </span>
-            <br className="hidden sm:block" />
-            <span className="relative inline-block mt-1">
-              E tem{" "}
-              <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-[var(--color-verde-profundo)] via-[#2a5d55] to-[var(--color-verde-profundo)] bg-clip-text text-transparent">
-                  caminho de volta
-                </span>
-                <svg
-                  aria-hidden
-                  viewBox="0 0 400 14"
-                  className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-3"
-                >
-                  <motion.path
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ delay: 1.3, duration: 1.4, ease: [0.16, 1, 0.3, 1] as const }}
-                    d="M4 9 Q 100 1 200 6 T 396 5"
-                    fill="none"
-                    stroke="url(#underline-grad)"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  <defs>
-                    <linearGradient id="underline-grad" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#F3CFB2" />
-                      <stop offset="100%" stopColor="#BECBBA" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+              <span className="bg-gradient-to-r from-[var(--color-verde-profundo)] via-[#2a5d55] to-[var(--color-verde-profundo)] bg-clip-text text-transparent">
+                caminho de volta
               </span>
-              .
+              <svg
+                aria-hidden
+                viewBox="0 0 400 14"
+                className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-3"
+              >
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ delay: 1.3, duration: 1.4, ease: [0.16, 1, 0.3, 1] as const }}
+                  d="M4 9 Q 100 1 200 6 T 396 5"
+                  fill="none"
+                  stroke="url(#underline-grad)"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+                <defs>
+                  <linearGradient id="underline-grad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stopColor="#F3CFB2" />
+                    <stop offset="100%" stopColor="#BECBBA" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </span>
+            .
           </motion.h1>
 
           <motion.p
@@ -142,12 +145,16 @@ export function Hero() {
             </a>
           </motion.div>
 
-          <motion.p
+          <motion.ul
             variants={fadeUp}
-            className="mt-14 text-xs uppercase tracking-[0.2em] text-[var(--color-tinta-mute)]"
+            className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0 text-[11px] uppercase tracking-[0.2em] text-[var(--color-tinta-mute)] list-none"
           >
-            Maria de Fátima Abreu <span className="opacity-40 mx-2">·</span> Registro CITRG 17.419 <span className="opacity-40 mx-2">·</span> Atendimento online e presencial
-          </motion.p>
+            <li>Maria de Fátima Abreu</li>
+            <li className="hidden sm:inline opacity-40 mx-3">·</li>
+            <li>Registro CITRG 17.419</li>
+            <li className="hidden sm:inline opacity-40 mx-3">·</li>
+            <li>Atendimento online e presencial</li>
+          </motion.ul>
         </motion.div>
       </div>
     </section>
