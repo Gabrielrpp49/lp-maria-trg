@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Problema } from "@/components/Problema";
+import { Filosofia } from "@/components/Filosofia";
 import { OQueETRG } from "@/components/OQueETRG";
 import { ComoFunciona } from "@/components/ComoFunciona";
 import { ParaQuem } from "@/components/ParaQuem";
@@ -20,6 +21,7 @@ export function App() {
       <main>
         <Hero />
         <Problema />
+        <Filosofia />
         <OQueETRG />
         <ComoFunciona />
         <ParaQuem />
