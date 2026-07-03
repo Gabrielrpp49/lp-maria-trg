@@ -5,14 +5,14 @@ import { WHATSAPP_URL } from "@/lib/utils";
 export function CTAFinal() {
   return (
     <>
-      {/* Wave top */}
-      <div className="relative -mb-px">
-        <svg viewBox="0 0 1440 90" preserveAspectRatio="none" className="block w-full h-14 md:h-20">
-          <path fill="#0E3C38" d="M0,56 C240,20 480,80 720,50 C960,20 1200,72 1440,40 L1440,90 L0,90 Z"/>
-        </svg>
+      {/* Separador sutil entre Poema (dark) e CTAFinal (dark) */}
+      <div className="section-dark relative">
+        <div className="container-lp py-4">
+          <div className="mx-auto h-px w-32 bg-gradient-to-r from-transparent via-[var(--color-bege)]/50 to-transparent" />
+        </div>
       </div>
 
-      <section className="section-dark relative py-24 md:py-36">
+      <section className="section-dark relative pt-16 pb-24 md:pt-20 md:pb-36">
         <div className="grain" aria-hidden />
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
