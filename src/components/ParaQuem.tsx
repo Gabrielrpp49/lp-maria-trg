@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
+import { LinkAtendimento } from "@/components/LinkAtendimento";
 
 const itens = [
   "Ansiedade e angústia",
@@ -67,6 +68,16 @@ export function ParaQuem() {
           <p className="font-display text-lg md:text-xl italic leading-relaxed text-[var(--color-verde-profundo)] text-balance">
             "A terapia caminha ao lado do cuidado médico e psicológico. Não no lugar dele. Se você está passando por um momento delicado, buscar apoio é um ato de coragem, e estou aqui para caminhar junto."
           </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-12 flex justify-center"
+        >
+          <LinkAtendimento />
         </motion.div>
       </div>
     </section>

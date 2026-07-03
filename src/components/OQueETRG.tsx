@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Info } from "lucide-react";
+import { LinkAtendimento } from "@/components/LinkAtendimento";
 
 export function OQueETRG() {
   return (
@@ -146,6 +147,16 @@ export function OQueETRG() {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-14 md:mt-16 flex justify-center"
+        >
+          <LinkAtendimento />
+        </motion.div>
       </div>
     </section>
   );
