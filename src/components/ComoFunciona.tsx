@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const passos = [
   {
     num: "01",
-    titulo: "Cronologia",
+    titulo: "Cronológica",
     texto: "Reconhecemos os eventos que, desde a infância, ainda influenciam quem você é hoje. Esse mapeamento ajuda a identificar bloqueios emocionais e traços limitantes que se repetem, abrindo uma visão comparativa entre o que passou e o que floresce agora.",
     icon: (
       /* Timeline com pontos */
@@ -21,7 +21,7 @@ const passos = [
   },
   {
     num: "02",
-    titulo: "Sensitivo",
+    titulo: "Sensitiva",
     texto: "Investigamos as manifestações corporais das emoções, a tensão que se instala, o cansaço que não passa, o aperto que fica. O corpo guarda o que a mente ainda não sabe nomear, e liberar isso é parte central do reprocessamento.",
     icon: (
       /* Corpo com onda de percepção */
@@ -34,7 +34,7 @@ const passos = [
   },
   {
     num: "03",
-    titulo: "Transitivo",
+    titulo: "Transitiva",
     texto: "Trabalhamos as emoções conectadas ao evento original e as transformamos. As cargas emocionais que pesavam começam a se dissolver, abrindo espaço para atravessar o dia a dia com mais leveza.",
     highlight: "dissolver",
     icon: (
