@@ -122,6 +122,13 @@ export function Poema() {
           </motion.div>
         </div>
       </section>
+
+      {/* Wave bottom: transição do dark de volta pro creme (FAQ) */}
+      <div className="relative -mt-px">
+        <svg viewBox="0 0 1440 90" preserveAspectRatio="none" className="block w-full h-14 md:h-20">
+          <path fill="#0E3C38" d="M0,0 L1440,0 L1440,40 C1200,80 960,20 720,44 C480,68 240,14 0,54 Z" />
+        </svg>
+      </div>
     </>
   );
 }

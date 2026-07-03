@@ -30,8 +30,8 @@ export function App() {
         <Sobre />
         <Depoimentos />
         <Atendimento />
-        <FAQ />
         <Poema />
+        <FAQ />
         <CTAFinal />
       </main>
       <Footer />
