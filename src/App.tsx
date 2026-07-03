@@ -10,6 +10,7 @@ import { Sobre } from "@/components/Sobre";
 import { Depoimentos } from "@/components/Depoimentos";
 import { Atendimento } from "@/components/Atendimento";
 import { FAQ } from "@/components/FAQ";
+import { Poema } from "@/components/Poema";
 import { CTAFinal } from "@/components/CTAFinal";
 import { Footer } from "@/components/Footer";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
@@ -30,6 +31,7 @@ export function App() {
         <Depoimentos />
         <Atendimento />
         <FAQ />
+        <Poema />
         <CTAFinal />
       </main>
       <Footer />
