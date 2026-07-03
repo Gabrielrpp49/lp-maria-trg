@@ -7,10 +7,10 @@ export function MobileStickyCTA() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const hideOn = [
-      document.querySelector(".section-dark:last-of-type"),
-      document.querySelector("footer.site-footer, footer"),
-    ].filter(Boolean) as Element[];
+    const darks = document.querySelectorAll(".section-dark");
+    const lastDark = darks[darks.length - 1] ?? null;
+    const footer = document.querySelector("footer");
+    const hideOn = [lastDark, footer].filter(Boolean) as Element[];
 
     if (!hideOn.length) return;
 

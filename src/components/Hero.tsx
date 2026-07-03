@@ -55,27 +55,26 @@ export function Hero() {
           animate="show"
           className="mx-auto max-w-4xl text-center"
         >
-          <motion.div
-            variants={fadeUp}
-            animate={{
-              boxShadow: [
-                "0 0 0 0 rgba(243, 207, 178, 0.55), 0 0 0 0 rgba(243, 207, 178, 0)",
-                "0 0 0 3px rgba(243, 207, 178, 0.35), 0 0 24px 4px rgba(243, 207, 178, 0.4)",
-                "0 0 0 0 rgba(243, 207, 178, 0.55), 0 0 0 0 rgba(243, 207, 178, 0)",
-              ],
-            }}
-            transition={{
-              boxShadow: { duration: 2.6, repeat: Infinity, ease: "easeInOut" },
-            }}
-            className="mb-8 inline-flex items-center gap-2.5 rounded-full border-[1.5px] border-[var(--color-bege)] bg-[var(--color-creme)]/40 backdrop-blur px-4 py-1.5"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-bege)] opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-bege)]" />
-            </span>
-            <span className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[var(--color-verde-profundo)]">
-              Terapia de Reprocessamento Generativo
-            </span>
+          <motion.div variants={fadeUp} className="mb-8 inline-block">
+            <motion.div
+              animate={{
+                boxShadow: [
+                  "0 0 0 0 rgba(243, 207, 178, 0.55), 0 0 0 0 rgba(243, 207, 178, 0)",
+                  "0 0 0 3px rgba(243, 207, 178, 0.35), 0 0 24px 4px rgba(243, 207, 178, 0.4)",
+                  "0 0 0 0 rgba(243, 207, 178, 0.55), 0 0 0 0 rgba(243, 207, 178, 0)",
+                ],
+              }}
+              transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-flex items-center gap-2.5 rounded-full border-[1.5px] border-[var(--color-bege)] bg-[var(--color-creme)]/40 backdrop-blur px-4 py-1.5"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-bege)] opacity-70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-bege)]" />
+              </span>
+              <span className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[var(--color-verde-profundo)]">
+                Terapia de Reprocessamento Generativo
+              </span>
+            </motion.div>
           </motion.div>
 
           <motion.h1

@@ -138,7 +138,7 @@ export function Depoimentos() {
           {/* Viewport do carrossel */}
           <div ref={containerRef} className="overflow-hidden">
             <motion.div
-              className="flex"
+              className="flex items-stretch"
               animate={{ x: `${-index * (100 / visibleCount)}%` }}
               transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
               drag="x"
@@ -154,13 +154,13 @@ export function Depoimentos() {
               {depoimentos.map((d, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 px-3"
+                  className="flex-shrink-0 px-3 flex"
                   style={{ width: `${100 / visibleCount}%` }}
                 >
-                  <blockquote className="group relative h-full rounded-[28px] border border-[var(--color-verde-profundo)]/8 bg-[var(--color-creme)]/85 backdrop-blur-sm p-7 md:p-8 hover:border-[var(--color-verde-profundo)]/20 hover:shadow-[0_28px_60px_-30px_rgba(14,60,56,0.35)] transition-all duration-500">
-                    <Quote className="absolute top-6 right-6 h-8 w-8 text-[var(--color-bege)] opacity-40" />
-                    <div className="pt-2">
-                      <p className="font-display italic text-[17px] md:text-[18px] leading-[1.55] text-[var(--color-tinta)] text-pretty mb-8">
+                  <blockquote className="group relative flex flex-col w-full rounded-[28px] border border-[var(--color-verde-profundo)]/8 bg-[var(--color-creme)]/85 backdrop-blur-sm p-7 md:p-8 hover:border-[var(--color-verde-profundo)]/20 hover:shadow-[0_28px_60px_-30px_rgba(14,60,56,0.35)] transition-all duration-500">
+                    <Quote className="absolute top-5 right-5 h-7 w-7 text-[var(--color-bege)] opacity-45" />
+                    <div className="flex flex-col flex-1 pt-8 pr-8">
+                      <p className="font-display italic text-[16.5px] md:text-[18px] leading-[1.55] text-[var(--color-tinta)] text-pretty mb-8 flex-1">
                         {d.texto}
                       </p>
                       <footer className="flex items-center gap-3 pt-6 border-t border-[var(--color-verde-profundo)]/10">
