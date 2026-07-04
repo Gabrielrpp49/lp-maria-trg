@@ -9,8 +9,8 @@ const elementos = [
       <svg viewBox="0 0 140 140" className="w-24 h-24" aria-hidden>
         <defs>
           <linearGradient id="corpo-grad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#0E3C38" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#0E3C38" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#C9A961" stopOpacity="1" />
+            <stop offset="100%" stopColor="#B8935A" stopOpacity="0.75" />
           </linearGradient>
         </defs>
         {/* triângulo apontando pra cima */}
@@ -55,8 +55,8 @@ const elementos = [
       <svg viewBox="0 0 140 140" className="w-24 h-24" aria-hidden>
         <defs>
           <linearGradient id="mente-grad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#0E3C38" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#0E3C38" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#C9A961" stopOpacity="1" />
+            <stop offset="100%" stopColor="#B8935A" stopOpacity="0.75" />
           </linearGradient>
         </defs>
         {/* triângulo */}
@@ -103,8 +103,8 @@ const elementos = [
       <svg viewBox="0 0 140 140" className="w-24 h-24" aria-hidden>
         <defs>
           <linearGradient id="espirito-grad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#0E3C38" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#0E3C38" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#C9A961" stopOpacity="1" />
+            <stop offset="100%" stopColor="#B8935A" stopOpacity="0.75" />
           </linearGradient>
         </defs>
         {/* triângulo */}
