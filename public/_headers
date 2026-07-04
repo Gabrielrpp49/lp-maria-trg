@@ -1,0 +1,26 @@
+# Cloudflare Pages headers config
+
+# Assets versionados pelo Vite (hash no nome) — cache 1 ano imutável
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imagens estáticas do public
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML e páginas — revalidar sempre (evita servir versão antiga)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Sitemap e robots — cache curto
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+# Segurança + performance para todas as respostas
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: interest-cohort=(), browsing-topics=()

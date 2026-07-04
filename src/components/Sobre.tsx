@@ -40,15 +40,20 @@ export function Sobre() {
             className="relative"
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] max-w-md mx-auto md:mx-0 border border-[var(--color-verde-profundo)]/10 shadow-[0_40px_80px_-30px_rgba(14,60,56,0.35)]">
-              <img
-                src="/assets/img/foto-maria.jpg"
-                alt="Maria de Fátima Abreu, terapeuta de Reprocessamento Generativo (TRG) certificada CITRG 17.419, atendimento online e presencial em Curitiba"
-                className="absolute inset-0 h-full w-full object-cover object-[center_18%]"
-                style={{ filter: "saturate(1.05) contrast(1.03)" }}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-              />
+              <picture>
+                <source srcSet="/assets/img/foto-maria.avif" type="image/avif" />
+                <source srcSet="/assets/img/foto-maria.webp" type="image/webp" />
+                <img
+                  src="/assets/img/foto-maria.jpg"
+                  alt="Maria de Fátima Abreu, terapeuta de Reprocessamento Generativo (TRG) certificada CITRG 17.419, atendimento online e presencial em Curitiba"
+                  className="absolute inset-0 h-full w-full object-cover object-[center_18%]"
+                  style={{ filter: "saturate(1.05) contrast(1.03)" }}
+                  width={480}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               {/* Gradient overlay bottom */}
               <div
                 className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[var(--color-verde-profundo)]/98 via-[var(--color-verde-profundo)]/60 to-transparent"
