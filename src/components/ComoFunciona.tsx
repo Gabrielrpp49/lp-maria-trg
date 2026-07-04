@@ -4,8 +4,8 @@ import { LinkAtendimento } from "@/components/LinkAtendimento";
 const passos = [
   {
     num: "01",
-    titulo: "Cronológica",
-    texto: "Reconhecemos os eventos que, desde a infância, ainda influenciam quem você é hoje. Esse mapeamento ajuda a identificar bloqueios emocionais e traços limitantes que se repetem, abrindo uma visão comparativa entre o que passou e o que floresce agora.",
+    titulo: "Cronológico",
+    texto: "Foca no reprocessamento de eventos desde o nascimento até o presente, visando identificar e tratar traumas, bloqueios emocionais e crenças limitantes. Esse processo promove uma melhor compreensão das experiências passadas e melhora o bem-estar emocional.",
     icon: (
       /* Timeline com pontos */
       <svg viewBox="0 0 48 48" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
@@ -22,37 +22,48 @@ const passos = [
   },
   {
     num: "02",
-    titulo: "Sensitiva",
-    texto: "Investigamos as manifestações corporais das emoções, a tensão que se instala, o cansaço que não passa, o aperto que fica. O corpo guarda o que a mente ainda não sabe nomear, e liberar isso é parte central do reprocessamento.",
+    titulo: "Somático",
+    texto: "Concentra-se na ligação entre emoções e manifestações corporais. O terapeuta ajuda o cliente a reconhecer e liberar tensões físicas associadas a memórias traumáticas, facilitando a integração mente-corpo e promovendo o bem-estar físico e emocional.",
+    highlight: "integração mente-corpo",
     icon: (
-      /* Corpo com onda de percepção */
-      <svg viewBox="0 0 48 48" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="24" cy="24" r="18" strokeOpacity="0.55" />
-        <path d="M10 24 Q15 18 20 24 T30 24 T40 24" />
-        <circle cx="24" cy="24" r="3" fill="currentColor" stroke="none" />
+      /* Corpo estilizado com pontos de tensão */
+      <svg viewBox="0 0 48 48" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="24" cy="10" r="3.2" />
+        <path d="M24 14 L 24 30" />
+        <path d="M14 20 L 24 22 L 34 20" />
+        <path d="M24 30 L 18 42" />
+        <path d="M24 30 L 30 42" />
+        <circle cx="14" cy="20" r="1.6" fill="currentColor" stroke="none" opacity="0.7" />
+        <circle cx="34" cy="20" r="1.6" fill="currentColor" stroke="none" opacity="0.7" />
+        <circle cx="24" cy="26" r="1.6" fill="currentColor" stroke="none" opacity="0.7" />
       </svg>
     ),
   },
   {
     num: "03",
-    titulo: "Transitiva",
-    texto: "Trabalhamos as emoções conectadas ao evento original e as transformamos. As cargas emocionais que pesavam começam a se dissolver, abrindo espaço para atravessar o dia a dia com mais leveza.",
-    highlight: "dissolver",
+    titulo: "Temático",
+    texto: "Focado nos temas centrais e dolorosos da vida do cliente. Ao reprocessar essas experiências, busca-se transformar crenças limitantes e promover uma visão mais positiva de si mesmo e da vida.",
+    highlight: "crenças limitantes",
     icon: (
-      /* Metamorfose: círculo → losango */
+      /* Núcleo temático: círculo central com ramificações */
       <svg viewBox="0 0 48 48" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="14" cy="24" r="7" strokeOpacity="0.55" />
-        <path d="M22 24 L 30 24" strokeDasharray="2 3" strokeOpacity="0.6" />
-        <path d="M34 24 L 40 18 L 46 24 L 40 30 Z" strokeOpacity="0" fill="none" transform="translate(-4, 0)" />
-        <path d="M34 24 L 39 19 L 44 24 L 39 29 Z" fill="currentColor" fillOpacity="0.2" />
-        <path d="M28 20 L 34 24 L 28 28" strokeOpacity="0.5" />
+        <circle cx="24" cy="24" r="6" />
+        <path d="M24 18 L 24 8" opacity="0.7" />
+        <path d="M30 24 L 40 24" opacity="0.7" />
+        <path d="M24 30 L 24 40" opacity="0.7" />
+        <path d="M18 24 L 8 24" opacity="0.7" />
+        <circle cx="24" cy="8" r="1.8" fill="currentColor" stroke="none" opacity="0.6" />
+        <circle cx="40" cy="24" r="1.8" fill="currentColor" stroke="none" opacity="0.6" />
+        <circle cx="24" cy="40" r="1.8" fill="currentColor" stroke="none" opacity="0.6" />
+        <circle cx="8" cy="24" r="1.8" fill="currentColor" stroke="none" opacity="0.6" />
       </svg>
     ),
   },
   {
     num: "04",
     titulo: "Futuro",
-    texto: "Preparamos você para o que ainda está por vir. Desanuviamos expectativas negativas e construímos, no lugar delas, uma visão mais serena e esperançosa do que pode acontecer daqui pra frente.",
+    texto: "Trata de medos e preocupações em relação ao futuro. O terapeuta ajuda o cliente a enfrentar perspectivas negativas, promovendo uma visão mais positiva e esperançosa do futuro, desenvolvendo estratégias adaptativas e fortalecendo a resiliência emocional.",
+    highlight: "resiliência emocional",
     icon: (
       /* Horizonte com sol e raios */
       <svg viewBox="0 0 48 48" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
@@ -68,16 +79,15 @@ const passos = [
   },
   {
     num: "05",
-    titulo: "Personalização",
-    texto: "Cada pessoa é única, e cada processo também. Personalizamos técnicas de visualização, respiração e imaginação guiada para que o caminho atenda ao seu tempo, ao seu jeito, à sua história.",
-    highlight: "único",
+    titulo: "Potencialização",
+    texto: "Encoraja o cliente a visualizar e trabalhar em direção ao melhor futuro possível. Utilizando a imaginação guiada, o cliente é incentivado a visualizar suas metas e objetivos, reforçando sua motivação e capacidades para alcançar um futuro desejado.",
+    highlight: "imaginação guiada",
     icon: (
-      /* Impressão digital / assinatura orgânica */
-      <svg viewBox="0 0 48 48" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M24 8 C 32 8, 40 15, 40 24 C 40 33, 34 40, 24 40 C 14 40, 8 33, 8 24" />
-        <path d="M14 24 C 14 18, 18 14, 24 14 C 30 14, 34 18, 34 24 C 34 30, 30 34, 24 34" strokeOpacity="0.7" />
-        <path d="M20 24 C 20 22, 22 20, 24 20 C 26 20, 28 22, 28 24 C 28 26, 26 28, 24 28" strokeOpacity="0.55" />
-        <circle cx="24" cy="24" r="1.6" fill="currentColor" stroke="none" />
+      /* Estrela subindo / potencial florescendo */
+      <svg viewBox="0 0 48 48" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M24 6 L 27 16 L 37 16 L 29 22 L 32 32 L 24 26 L 16 32 L 19 22 L 11 16 L 21 16 Z" fill="currentColor" fillOpacity="0.15" />
+        <path d="M24 32 L 24 42" opacity="0.6" />
+        <path d="M18 38 L 24 42 L 30 38" opacity="0.6" />
       </svg>
     ),
   },
