@@ -1,5 +1,6 @@
 node_modules/
-dist/
+# dist/ é commitado propositalmente pra servir HTML prerendered
+# (Cloudflare Pages serve direto sem re-build)
 .DS_Store
 Thumbs.db
 *.log
