@@ -41,7 +41,7 @@ export function OQueETRG() {
               <strong className="font-semibold text-[var(--color-verde-profundo)]">
                 Terapia de Reprocessamento Generativo (TRG)
               </strong>{" "}
-              é uma terapia breve e focada, criada pelo psicólogo brasileiro Jair Soares.
+              é uma terapia breve e focada em resultados, criada pelo psicólogo brasileiro Jair Soares.
             </p>
             <p>
               Em vez de apenas falar sobre o problema, ela vai até a{" "}
